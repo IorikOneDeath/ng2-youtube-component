@@ -1,3 +1,44 @@
 <h1>
   {{title}}
+
+  <!--<app-hello-world></app-hello-world>
+
+  <app-user-list></app-user-list>-->
+  <app-youtube-copmonent [name]="'JS'"></app-youtube-copmonent>
+  <app-youtube-copmonent [name]="'C++'"></app-youtube-copmonent>
+  <app-youtube-copmonent [name]="'foo'"></app-youtube-copmonent>
 </h1>
+
+<html>
+
+<body style="background-color:DarkGray;">
+          <hr>
+        <div id="ytContent"></div>
+	<script>
+        function loadApi() {
+            return new Promise(function(resolve,reject){
+               gapi.client.setApiKey('AIzaSyC7S3FyMjiG2chr68L2sdFr0PLWqtX73uE'); 
+               gapi.client.load('youtube', 'v3', resolve);
+            });
+        };
+          loadApi().then(function() { 
+                var request = gapi.client.youtube.search.list({
+                        part: 'snippet',
+                });
+                request.execute(function(response) { 
+                        var content = JSON.parse(str);;
+                        var Outstring = '';
+                        {
+                           Outstring+='<a href="https://www.youtube.com/'+hrefPart+'">'+movieOrChannelContainer.snippet.title+'</a><br>';
+                           Outstring+='<img src="'+movieOrChannelContainer.snippet.thumbnails.default.url+'"><br>';
+                        }
+
+                        document.getElementById('ytContent').innerHTML = Outstring;
+
+                });
+          });
+</script>
+	<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</body>
+
+</html>

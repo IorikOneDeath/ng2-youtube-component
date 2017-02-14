@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { YoutubeCopmonentComponent } from './youtube-copmonent/youtube-copmonent.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YoutubeCopmonentComponent
   ],
   imports: [
     BrowserModule,

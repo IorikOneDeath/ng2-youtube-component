@@ -1,5 +1,6 @@
-<p>
-  Language : {{name}}<br>
-  Video about this language : {{link}}<br>
-  Image : {{picture}}<br> 
-</p>
+<div *ngFor= "let item of items">
+  {{item.title}} <br>
+  <img src = "{{item.image}}" width = '200' hight = '200'> <br>
+  <a href = "{{item.link}}"> 
+  go </a>
+  <hr></div>

@@ -9,21 +9,18 @@ export class YoutubeCopmonentComponent implements OnInit {
   public items: Array<any> = [];
   constructor() { }
   ngOnInit() {
-    this.items = [
+     this.items = [
   {
     title: 'JavaScript',
-   link: '',
+   link: 'https://www.youtube.com/watch?v=KmTK8kub_gw',
    image: 'http://www.itmathrepetitor.ru/wp-content/uploads/2015/03/JavaScript-logo.png'
   },
    {
      title: 'C++',
-     link: '',
+     link: 'https://www.youtube.com/watch?v=qSHP98i9mDU',
      image: 'http://www.itmathrepetitor.ru/wp-content/uploads/2015/03/JavaScript-logo.png'
    }
   
 ]
-
-
   }
-
 }

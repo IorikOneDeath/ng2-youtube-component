@@ -1,6 +1,5 @@
-<div *ngFor= "let item of items">
-  {{item.title}} <br>
-  <img src = "{{item.image}}" width = '200' hight = '200'> <br>
-  <a href = "{{item.link}}"> 
-  go </a>
-  <hr></div>
+<app-youtube-item *ngFor= "let item of items"
+  [title]="item.title"
+  [link]="item.link"
+  [image]="item.image">
+   </app-youtube-item>

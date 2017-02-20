@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { YoutubeCopmonentComponent } from './youtube-copmonent/youtube-copmonent.component';
+import { YoutubeItemComponent } from './youtube-item/youtube-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    YoutubeCopmonentComponent
+    YoutubeCopmonentComponent,
+    YoutubeItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<div>
+ Search: <b>{{name}}</b>
+ <button (click)="clicked($event)">add</button>
+ </div>
+
+<app-weather-item *ngFor= "let item of items"
+  [town] = "item.town"
+  [temp] = "item.temp">
+</app-weather-item>
